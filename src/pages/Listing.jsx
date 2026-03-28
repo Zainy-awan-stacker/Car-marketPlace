@@ -18,7 +18,7 @@ function Listing() {
     const heroDestination = (searchParams.get("destination")||"").toLowerCase().trim()
 
     const sortOptions = ["Relevant","Low to High", "High to Low"];
-    console.log(filter);
+    
     const bodyType =[
       "Coupe",
       "SUV",
@@ -34,6 +34,15 @@ function Listing() {
       "30000 to 50000",
       "50000 to 99000"
     ];
+
+    //pagination vala function 
+    // const getPaginatedCars = () =>{
+    //   const startIndex = (currPage - 1) *itemsPerPage;
+    //   const endIndex = startIndex + itemsPerPage
+    //   return filteredCars.slice(startIndex,endIndex)
+    // }
+
+    // const totalPages = Math.ceil(filteredCars.length / itemsPerPage)
         // yha py aik const toggle filter bnany lga hu checkbox k liye
         const handleFilterChange = (checked,value,type) =>{
           setFilter((prev)=>{
@@ -49,11 +58,11 @@ function Listing() {
           // yha py car ko sort krny ka function
 
           const sortCars = (a,b)=>{
-            if (sort === "Low to High") return a.purchasePrice - b.purchasePrice;
-            if (sort === "High to Low") return b.purchasePrice - a.purchasePrice;
+            if (sort === "Low to High") return a.price.purchasePrice - b.price.purchasePrice
+            if (sort === "High to Low") return b.price.purchasePrice - a.price.purchasePrice;
             return 0
-          }
-            // yha py price vala filter function chly ga
+           }
+          //   yha py price vala filter function chly ga
             const matchesPrice = (car)=>{
               if(filter.priceRange.length === 0) return true;
               return filter.priceRange.some((range)=>{
@@ -102,7 +111,7 @@ function Listing() {
     <section className="Section bg-primary px-5 py-10">
        {/* leftside part */}
         <div className="inner-sec flex gap-8">
-       <aside className="sidebar bg-white  rounded-md  flex flex-col gap-10">
+       <aside className="sidebar w-[250px] bg-white  rounded-md  flex flex-col gap-10">
       <div className="sorting-sec flex flex-col mx-5">
        {/* ye ha sorting vala part */}
         <h5 className=" py-2">Sort By</h5>
@@ -138,17 +147,18 @@ function Listing() {
         
        </div> 
        </aside>
-       <main className="right-side grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  gap-6 bg-white p-4 rounded-md ">
+       <main className="right-side grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  gap-6 bg-white p-4 rounded-md  ">
         
           {filteredCars.length > 0 ? (
             filteredCars.map((car)=>(
-              <Item key={car} car={car} />
+              <Item key={car.id} car={car} />
             ))
           ) : (
             <p className="capitalize">No cars found for selected filters</p>
           )}
         
        </main>
+       
        </div>
     </section>
   )

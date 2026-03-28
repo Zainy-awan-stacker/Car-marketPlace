@@ -8,7 +8,7 @@ function Hero() {
       <div className="max-padd-container ">
         <div className=" max-padd-container relative flex  mx-auto flex-col gap-9 py-6">
           <div className="FirstPhase  flex flex-col gap-8 justify-center px-10 py-5">
-            <div className="textify flex justify-center">
+            <div className="textify flex justify-center md:flex-wrap">
               <h1 className="max-w-5xl text-center capitalize">
                 Explore
                 <span className="bg-gradient-to-r from-sky-500 to-white pl-1 rounded-md">
@@ -96,7 +96,7 @@ function Hero() {
                 </button>
               </form>
             </div>
-            <div className="imagify flex justify-center">
+            <div className="imagify flex justify-center md:w-full">
               <img
                 src="/images/bg.png"
                 alt="bgImg"

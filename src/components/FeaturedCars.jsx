@@ -6,9 +6,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import Cars from "../data/Cars";
+import { useNavigate } from "react-router-dom";
 
 function FeaturedCars() {
+  const navigate = useNavigate()
   const [featured, setFeatured] = useState([]);
+  const handleMoveTo =()=>{
+     navigate(`/listing/${car.id}`);
+  }
 
   //  useEffect(()=>{
   //   const data =Cars.filter((car)=> cities.includes(car.city))
@@ -72,8 +77,8 @@ function FeaturedCars() {
         }}
       >
         {Cars.map((car) => (
-          <SwiperSlide key={Cars.id}>
-            <Item car={car} />
+          <SwiperSlide key={Cars.id} onClick={handleMoveTo} className="click cursor-pointer">
+            <Item car={car}/>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,32 +1,100 @@
+// import React from "react";
+// import { NavLink } from "react-router-dom";
+
+// const Navbar = ({ setMenuOpened }) => {
+
+//  const navLinks = [
+//   { path: "/", title: "Home" },
+//   { path: "/listing", title: "Listing" },
+//   { path: "/blog", title: "Blog" },
+//   { path: "/contact", title: "Contact" },
+//  ];
+
+//  const handleClick = () => {
+//   setMenuOpened(false);
+//  };
+
+//  return (
+
+//   <nav className="flex gap-5">
+
+//    {navLinks.map((link)=>(
+    
+//     <NavLink
+//      key={link.title}
+//      to={link.path}
+//      onClick={handleClick}
+//      className={({isActive}) =>
+//       `${isActive ? "active-link" : ""} font-bold`
+//      }
+//     >
+
+//      {link.title}
+
+//     </NavLink>
+
+//    ))}
+
+//   </nav>
+
+//  );
+
+// };
+
+// export default Navbar;
+
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Navbar = ({ setMenuOpened, className }) => {
+const Navbar = ({ menuOpened, setMenuOpened }) => {
+
   const navLinks = [
     { path: "/", title: "Home" },
     { path: "/listing", title: "Listing" },
-    { path: "blog", title: "blog" },
-    { path: "contact", title: "Contact" },
+    { path: "/blog", title: "Blog" },
+    { path: "/contact", title: "Contact" },
   ];
-  const handleClick = (e) => {
-    //  e.preventDefault()
+
+  const handleClick = () => {
     setMenuOpened(false);
-    // window.scrollTo(0, 0);
   };
+
   return (
-    <nav className="">
-      {navLinks.map((link) => (
-        <NavLink
-          onClick={()=>handleClick()}
-          key={link.title}
-          to={link.path}
-          className={({ isActive }) => `${isActive ? "active-link" : ""}
-        px-3 py-2 rounded-full uppercase text-sm font-bold`}
-        >
-          {link.title}
-        </NavLink>
-      ))}
-    </nav>
+    <>
+      {/* Desktop Menu */}
+      <nav className="hidden lg:flex gap-5">
+        {navLinks.map((link) => (
+          <NavLink
+            key={link.title}
+            to={link.path}
+            onClick={handleClick}
+            className={({ isActive }) =>
+              `${isActive ? "active-link" : ""} font-bold`
+            }
+          >
+            {link.title}
+          </NavLink>
+        ))}
+      </nav>
+
+      {/* Mobile Dropdown */}
+      {menuOpened && (
+        <div className="absolute top-[70px] left-0 w-full bg-white shadow-md flex flex-col items-center gap-6 py-6 lg:hidden z-50">
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.title}
+              to={link.path}
+              onClick={handleClick}
+              className={({ isActive }) =>
+                `${isActive ? "active-link" : ""} font-bold`
+              }
+            >
+              {link.title}
+            </NavLink>
+          ))}
+        </div>
+      )}
+    </>
   );
 };
 

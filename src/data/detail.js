@@ -36,9 +36,10 @@ const Details = [
     images: {
       main: "/images/corolla.png",
       gallery: [
-        "/images/corolla-1.png",
-        "/images/corolla-2.png",
-        "/images/corolla-3.png",
+        "/images/corolaFront.png",
+        "/images/corolaRight.png",
+        "/images/roof.png",
+        "/images/corola-altis.png",
       ],
     },
   },
@@ -80,9 +81,10 @@ const Details = [
     images: {
       main: "/images/civic.png",
       gallery: [
-        "/images/civic-1.png",
-        "/images/civic-2.png",
-        "/images/civic-3.png",
+        "/images/civic-front.png",
+        "/images/civic-right.png",
+        "/images/civic-full.png",
+         "/images/civic-roof.png",
       ],
     },
   },
@@ -121,8 +123,10 @@ const Details = [
     images: {
       main: "/images/alto.png",
       gallery: [
-        "/images/alto-1.png",
-        "/images/alto-2.png",
+        "/images/alto-front.png",
+        "/images/alto-right.png",
+        "/images/alto-view.png",
+        "/images/alto-back.png",
       ],
     },
   },
@@ -163,8 +167,10 @@ const Details = [
     images: {
       main: "/images/yaris.png",
       gallery: [
-        "/images/yaris-1.png",
-        "/images/yaris-2.png",
+        "/images/yaris-right.png",
+        "/images/yaris-front.png",
+        "/images/yaris-view.png",
+        "/images/yaris-back.png",
       ],
     },
   },
