@@ -19,14 +19,8 @@ html,body{
 @layer components{
   .active-link{
     @apply relative
-    after:content-['']
-    after:absolute
-    after:w-2/5
-    after:h-1
-    after:rounded-full
-    after:bg-[#00bfff]
-    after:-bottom-0.5
-    after:right-3;
+    
+
   }
 }
 
@@ -36,5 +30,5 @@ html,body{
   h3{@apply text-[24px] md:text-[31px] font-bold;}
   h4{@apply text-[17px] md:text-[19px] font-bold;}
   h5{@apply text-[15px] md:text-[16px] font-bold;}
-  p{@apply leading-[1.3] text-[14px] text-gray-50;}
+  p{@apply leading-[1.3] text-[14px]; color: var(--color-gray-50);}
 }

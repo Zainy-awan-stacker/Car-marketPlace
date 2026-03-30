@@ -1,19 +1,15 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import Cars from '../data/Cars'
 import { GiGearStickPattern } from "react-icons/gi";
 import { MdAirlineSeatReclineExtra } from "react-icons/md";
 import { BsFuelPumpFill } from "react-icons/bs";
 import { BsSpeedometer2 } from "react-icons/bs";
 
 function Item({car}) {
-    // const currency ="pkr"
-    // const navigate =useNavigate()
+    const navigate =useNavigate()
 
-    // // color jo cycle through hony
-    // const colors =["#f5f5f5","#f0f9fd","#fcf6ed"]
   return (
-     <div className={`rounded-xl shadow p-4 ${car.bgColor}`} >
+     <div className={`rounded-xl shadow p-4 ${car.bgColor}`} onClick={() =>{navigate(`/listing/ ${car.id}`)}} >
       <h3 className="font-semibold">{car.name}</h3>
       <div className='inside-edit flex justify-between items-center py-2 gap-5'>
         <div><h5>{car.type}</h5></div>

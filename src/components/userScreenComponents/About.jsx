@@ -10,25 +10,6 @@ function About() {
       <h1>Helping You Every Step of the Way</h1>
       <p className='text mt-5 mb-10'>Find reliable car with transparent pricing, verified inspections, flexible pickup and delivery options, and 24/7 customer support for a smooth rental or buying experience.</p>
       </div>
-      {/* <div className='inside-box flex  gap-6 border w-full md:w-1/4 lg:w-full'>
-      <div className='first p-4 bg-primary w-full lg:w-1/2'>
-        <h5>Wide Vehicle Selection</h5>
-        <p className='text mt-2'>Book in seconds with instant confirmations and flexible pickup options, so you get on the road fast without waiting or hassles.</p>
-      </div>
-      <div className='scnd p-4 bg-sky-300 w-full lg:w-1/2 ' >
-      <h5>Quick Service</h5>
-      <p>Choose from economy to luxury models, regularly maintained and verified, giving you reliable performance and the perfect car for every trip.</p>
-      </div>
-      <div className='thrd p-4 w-full lg:w-1/2 bg-amber-100'>
-        <h5>Transparent Pricing</h5>
-        <p>Upfront rates with no hidden fees, clear breakdowns for insurance and extras, so pricing stays predictable and easy to understand before booking.</p>
-      </div>
-      <div className='four p-4 w-full lg:w-1/2'>
-        <h5>24/7 Support</h5>
-        <p>Around the clock customer support via chat and phone, resolving issues quickly and helping with changes, extensions, or roadside assistance anytime you need.</p>
-      </div>
-
-      </div> */}
       <div className='inside-box flex flex-wrap justify-center gap-6 w-full '>
 
   <div className='first p-4 bg-primary w-full lg:w-[45%] rounded-xl'>

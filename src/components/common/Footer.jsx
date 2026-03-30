@@ -3,8 +3,8 @@ import React from 'react'
 function Footer() {
   return (
     <footer className='footer bg-gray-200  px-12'>
-    <div className='footer-div w-full flex items-center gap-10 md:gap-6'>
-    <div className='first-part flex flex-col w-full sm:w-1/2  p-4 gap-3'>
+    <div className='footer-div  grid lg:grid-cols-4 items-center gap-10 md:gap-6'>
+    <div className='first-part flex flex-col w-full   p-4 gap-3'>
       <div className='relative'>
        <img src='/images/cars.png' alt='car' width={80}/>
        <span className='absolute top-13 pl-1'>RENTIFY</span>
@@ -17,7 +17,7 @@ function Footer() {
        <img src='/images/linkdin.png' alt='link'/>
       </div>
     </div>
-    <div className='scnd-box w-full  sm:w-1/2 lg:1/2 px-4'>
+    <div className='scnd-box w-full  px-4'>
       <h4>COMPANY</h4>
       <ul className='flex gap-2 flex-col'>
         <li>About</li>
@@ -27,7 +27,7 @@ function Footer() {
         <li>Partners</li>
       </ul>
     </div>
-    <div className='thrd-box w-full  sm:w-1/2 lg:1/2 px-4'>
+    <div className='thrd-box w-full  px-4'>
       <h4>Support</h4>
       <ul className='flex gap-2 flex-col'>
         <li>Help center</li>
@@ -42,7 +42,7 @@ function Footer() {
       <p className='mini-para font-serif w-full'>Subscribe to our newsletter for inspiration and special offers.</p>
       <div className='last-email flex relative '>
         <input type='email' placeholder='Your email...' className='border-black rounded-full py-2 px-4  bg-white relative w-full'/>
-        <button className='btn-blk bg-black text-white font-bold px-4 py-2 rounded-full absolute left-45 '>Subscribe</button>
+        <button className='btn-blk bg-black text-white font-bold px-4 py-2 rounded-full absolute left-20 '>Subscribe</button>
       </div>
     </div>
     </div>
