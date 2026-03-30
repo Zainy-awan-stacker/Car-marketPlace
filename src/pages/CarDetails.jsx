@@ -1,14 +1,13 @@
 import React from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { useParams } from "react-router-dom";
-import Details from "../data/detail";
+import { Details } from "../data";
 import { IoIosStar } from "react-icons/io";
 import { GiGearStickPattern } from "react-icons/gi";
 import { MdAirlineSeatReclineExtra } from "react-icons/md";
 import { BsFuelPumpFill } from "react-icons/bs";
 import { BsSpeedometer2 } from "react-icons/bs";
 import { FaRegCalendarAlt } from "react-icons/fa";
-import { IoSearchSharp } from "react-icons/io5";
 
 function CarDetails() {
   const { id } = useParams();
@@ -48,16 +47,6 @@ function CarDetails() {
             </h4>
           </div>
 
-          {/* Specs */}
-          {/* <div className="grid grid-cols-2 gap-2">
-            <p>Brand: {car.specs.brand}</p>
-            <p>Model: {car.specs.model}</p>
-            <p>Type: {car.specs.type}</p>
-            <p>Fuel: {car.specs.fuel}</p>
-            <p>Transmission: {car.specs.transmission}</p>
-            <p>Seats: {car.specs.seats}</p>
-            <p>Mileage: {car.specs.mileage}</p>
-          </div> */}
           <div className="car-feature flex gap-5">
             <div className="flex  gap-1 items-center">
               <GiGearStickPattern />

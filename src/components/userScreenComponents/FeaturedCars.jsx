@@ -1,24 +1,21 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Item from "./Item";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-import Cars from "../data/Cars";
+import { Cars } from "../../data";
 import { useNavigate } from "react-router-dom";
 
 function FeaturedCars() {
   const navigate = useNavigate()
-  const [featured, setFeatured] = useState([]);
   const handleMoveTo =()=>{
-     navigate(`/listing/${car.id}`);
+     navigate(`/listing/${Cars.id}`);
   }
 
-  //  useEffect(()=>{
-  //   const data =Cars.filter((car)=> cities.includes(car.city))
-  //   setFeatured(Cars);
-  // },[]);
+  const handleHoverTo = ()=>{
+        navigate('/listing')
+  }
+
   return (
     <section className="third-container py-16 px-15">
       {/* maindev */}
@@ -46,8 +43,8 @@ function FeaturedCars() {
               <span>Displaying 1–6 </span>from 3k listing
             </h5>
           </div>
-          <Link to={"/listing"} onClick={() => scrollTo(0, 0)}>
-            <div className="polish p-3 bg-sky-400 rounded-md cursor-pointer ">
+           
+            <div className="polish p-3 bg-sky-400 rounded-md cursor-pointer" onClick={handleHoverTo} >
               <img
                 src="/images/filter.png"
                 alt="filter"
@@ -55,7 +52,7 @@ function FeaturedCars() {
                 className="filter-img invert"
               />
             </div>
-          </Link>
+          
         </div>
       </div>
       {/* ye ha car feature vala part */}

@@ -1,15 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { RiLoginCircleFill } from "react-icons/ri";
 
-import Navbar from "../commonPages/Navbar";
+import Navbar from "./Navbar";
 
 function Header() {
   const [menuOpened, setMenuOpened] = useState(false);
-  const [active, setActive] = useState(false);
+  const [active] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const location = useLocation();
-  const isHomePage = location.pathname.endsWith("/");
+  const isHomePage = location.pathname === "/";
   return (
     <header
       className={`sticky top-0 z-20 
@@ -31,7 +31,6 @@ function Header() {
           <Navbar 
           menuOpened={menuOpened}
           setMenuOpened={menuOpened}
-            className="w-[200] h-[120]"
           />
           <div className="paint flex gap-10">
             <div className="search-sec flex relative ">

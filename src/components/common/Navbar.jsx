@@ -1,59 +1,14 @@
-// import React from "react";
-// import { NavLink } from "react-router-dom";
-
-// const Navbar = ({ setMenuOpened }) => {
-
-//  const navLinks = [
-//   { path: "/", title: "Home" },
-//   { path: "/listing", title: "Listing" },
-//   { path: "/blog", title: "Blog" },
-//   { path: "/contact", title: "Contact" },
-//  ];
-
-//  const handleClick = () => {
-//   setMenuOpened(false);
-//  };
-
-//  return (
-
-//   <nav className="flex gap-5">
-
-//    {navLinks.map((link)=>(
-    
-//     <NavLink
-//      key={link.title}
-//      to={link.path}
-//      onClick={handleClick}
-//      className={({isActive}) =>
-//       `${isActive ? "active-link" : ""} font-bold`
-//      }
-//     >
-
-//      {link.title}
-
-//     </NavLink>
-
-//    ))}
-
-//   </nav>
-
-//  );
-
-// };
-
-// export default Navbar;
-
 import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = ({ menuOpened, setMenuOpened }) => {
 
   const navLinks = [
-    { path: "/", title: "Home" },
-    { path: "/listing", title: "Listing" },
-    { path: "/blog", title: "Blog" },
-    { path: "/contact", title: "Contact" },
-  ];
+  { path: "/", title: "Home" },
+  { path: "/listing", title: "Listing" },  
+  { path: "/blog", title: "Blog" },       
+  { path: "/contact", title: "Contact" }, 
+];
 
   const handleClick = () => {
     setMenuOpened(false);

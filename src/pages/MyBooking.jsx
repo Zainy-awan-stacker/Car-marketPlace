@@ -1,9 +1,7 @@
 import React from "react";
-import { useState } from "react";
-import myBookings from "../data/myBookings";
+import { myBookings } from "../data";
 
 function MyBooking() {
-  const [bookings, setBookings] = useState([]);
   return (
     <div className="booking-section p-10">
       <div className="first-part grid grid-cols-2">
